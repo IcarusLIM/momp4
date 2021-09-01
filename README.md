@@ -1,8 +1,8 @@
 # Get Video Duration of A .mp4 File
 
-Extract metadata of .mp4 video that corresponded by the given link
+Extract metadata of .mp4 video that corresponded with the given link
 
-Instead of entire file, download the necessary data only
+Instead of the entire file, download the necessary data only
 
 The video server should support [range](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Range)
 
@@ -28,8 +28,9 @@ methods about video.mp4.MP4Stream
 
 - **feed(bytes[, offset])**  
     feed bytes to parser  
-    return offset to read next time and the length of byte suggested to read
+    params: bytes, bytes read from video file; offset, the start offset of the given bytes (if not provided, append bytes to last feed)  
+    return: offset to read next time and the length of byte suggested to read
 
 - **get_meta()**  
     get parsed metadata  
-    return (metadata, is done and ready to exit)
+    return: metadata; is done and ready to exit
